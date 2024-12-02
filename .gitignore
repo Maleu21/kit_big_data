@@ -22,3 +22,14 @@ logs/
 
 # VS Code
 .vscode/
+
+# Ajouter les patterns au .gitignore
+echo "# Virtual Environments
+.venv/
+.venv*/
+*/.venv/
+venv/
+env/
+ENV/
+.env/
+.env*/" >> .gitignore
