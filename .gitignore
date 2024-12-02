@@ -32,4 +32,12 @@ venv/
 env/
 ENV/
 .env/
-.env*/" >> .gitignore
+.env*/" >> .gitignore# Dataset files
+Dataset_unzipped/
+food-com-recipes-and-user-interactions.zip
+**/Dataset_unzipped/
+**/*.zip
+
+# Specific paths
+/src/kit_big_data/food-com-recipes-and-user-interactions.zip
+/src/kit_big_data/Dataset_unzipped/
