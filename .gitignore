@@ -37,6 +37,9 @@ Dataset_unzipped/
 food-com-recipes-and-user-interactions.zip
 **/Dataset_unzipped/
 **/*.zip
+**/*/transformed_recipes.csv
+**/transformed_recipes.csv
+*/transformed_recipes.csv
 
 # Specific paths
 /src/kit_big_data/food-com-recipes-and-user-interactions.zip
