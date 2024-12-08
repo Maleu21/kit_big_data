@@ -4,21 +4,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 import plotly.express as px
-import os
+
 
 
 # Configuration de la page
 st.set_page_config(page_title="Recipe Dashboard", page_icon="🍲", layout="wide")
 st.title("🍲 All Recipes")
-# Get the current working directory
-current_directory = os.getcwd()
-st.write(f"Current Working Directory: {current_directory}")
-
-# List all files and directories in the current directory
-files = os.listdir(current_directory)
-st.write("Files and Directories:")
-for file in files:
-    st.write(file)
 
 @st.cache_data
 def load_data(file_path, expected_columns):
@@ -58,8 +49,8 @@ recipes_columns = [
 ]
 interactions_columns = ["recipe_id", "rating"]
 
-recipes_df = load_data("src/kit_big_data/recipes.csv", recipes_columns)
-interactions_df = load_data("src/kit_big_data/interactions.csv", interactions_columns)
+recipes_df = load_data("recipes.csv", recipes_columns)
+interactions_df = load_data("interactions.csv", interactions_columns)
 
 # Titre de la section
 st.title("Distribution du Temps de Préparation des Recettes")
