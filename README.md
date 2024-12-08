@@ -1,6 +1,8 @@
 # Kit_Big_Data
 
+the datasets used to run all the pages of our app are stocked in the path : 
 
+		Kit_Big_Data\src\kit_big_data
 
 ## Getting started
 
