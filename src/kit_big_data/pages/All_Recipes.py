@@ -4,12 +4,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 import plotly.express as px
+import os
 
 
 # Configuration de la page
 st.set_page_config(page_title="Recipe Dashboard", page_icon="🍲", layout="wide")
 st.title("🍲 All Recipes")
-
+st.write(os.getcwd())
 
 @st.cache_data
 def load_data(file_path, expected_columns):
@@ -51,8 +52,8 @@ interactions_columns = ["recipe_id", "rating"]
 
 recipes_df = load_data("recipes.csv", recipes_columns)
 interactions_df = load_data("interactions.csv", interactions_columns)
-recipes_df = pd.read_csv("recipes.csv")
-interactions_df = pd.read_csv("interactions.csv.csv")
+recipes_df = pd.read_csv('recipes.csv')
+interactions_df = pd.read_csv('interactions.csv.csv')
 # Titre de la section
 st.title("Distribution du Temps de Préparation des Recettes")
 
