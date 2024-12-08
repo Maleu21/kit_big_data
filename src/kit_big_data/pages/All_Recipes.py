@@ -51,7 +51,8 @@ interactions_columns = ["recipe_id", "rating"]
 
 recipes_df = load_data("recipes.csv", recipes_columns)
 interactions_df = load_data("interactions.csv", interactions_columns)
-
+recipes_df = pd.read_csv("recipes.csv")
+interactions_df = pd.read_csv("interactions.csv.csv")
 # Titre de la section
 st.title("Distribution du Temps de Préparation des Recettes")
 
