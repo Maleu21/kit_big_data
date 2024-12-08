@@ -3,8 +3,7 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(page_title="Recipe Dashboard", page_icon="🍲", layout="wide")
 
-<<<<<<< HEAD
-=======
+
 # Ajout d'un fond noir et personnalisation de la barre latérale avec une ombre blanche
 st.markdown(
     """
@@ -33,7 +32,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
->>>>>>> Nohaila2
+
 # Titre principal
 st.title("🍲 Recipe Project: Kit Big Data - BGDIA700")
 st.markdown(
@@ -104,10 +103,10 @@ Pour répondre à nos problématiques, nous combinerons les informations des deu
 Nous irons plus loin en utilisant le **NLP** pour générer des **noms de recettes à la fois créatifs et logiques** à partir des données disponibles.
 """
 )
-<<<<<<< HEAD
+
 # Sidebar navigation
 st.sidebar.success("Naviguez entre les pages pour découvrir les analyses !")
-=======
+
 
 # Ajouter des pages supplémentaires
 st.sidebar.title("Navigation")
@@ -136,4 +135,4 @@ st.sidebar.success("Naviguez entre les pages pour découvrir les analyses !")
 
 # Configuration pour la taille du dataset
 st.sidebar.markdown("**Limite actuelle de chargement des fichiers : 1GB**")
->>>>>>> Nohaila2
+

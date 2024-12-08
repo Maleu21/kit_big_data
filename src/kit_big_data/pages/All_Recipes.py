@@ -10,8 +10,7 @@ import plotly.express as px
 st.set_page_config(page_title="Recipe Dashboard", page_icon="🍲", layout="wide")
 st.title("🍲 All Recipes")
 
-<<<<<<< HEAD
-=======
+
 # Ajout d'un fond noir et personnalisation de la barre latérale avec une ombre blanche
 st.markdown(
     """
@@ -39,7 +38,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
->>>>>>> Nohaila2
+
 
 @st.cache_data
 def load_data(file_path, expected_columns):

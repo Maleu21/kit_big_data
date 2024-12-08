@@ -5,8 +5,7 @@ import pandas as pd
 # Configuration de la page
 st.set_page_config(page_title="Recipe Dashboard", page_icon="🍲", layout="wide")
 
-<<<<<<< HEAD
-=======
+
 # Ajout d'un fond noir et personnalisation de la barre latérale avec une ombre blanche
 st.markdown(
     """
@@ -34,7 +33,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
->>>>>>> Nohaila2
+
 
 # Charger les datasets
 @st.cache_data

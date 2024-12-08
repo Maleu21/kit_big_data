@@ -11,8 +11,7 @@ from collections import Counter
 st.set_page_config(page_title="Recipe Dashboard", page_icon="🍲", layout="wide")
 st.title("🍲 Popular Recipes")
 
-<<<<<<< HEAD
-=======
+
 # Ajout d'un fond noir et personnalisation de la barre latérale avec une ombre blanche
 st.markdown(
     """
@@ -40,7 +39,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
->>>>>>> Nohaila2
+
 
 @st.cache_data
 def load_data2(file_path, expected_columns):
