@@ -10,7 +10,15 @@ import os
 # Configuration de la page
 st.set_page_config(page_title="Recipe Dashboard", page_icon="🍲", layout="wide")
 st.title("🍲 All Recipes")
-st.write(os.getcwd())
+# Get the current working directory
+current_directory = os.getcwd()
+st.write(f"Current Working Directory: {current_directory}")
+
+# List all files and directories in the current directory
+files = os.listdir(current_directory)
+st.write("Files and Directories:")
+for file in files:
+    st.write(file)
 
 @st.cache_data
 def load_data(file_path, expected_columns):
