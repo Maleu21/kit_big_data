@@ -3,6 +3,34 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(page_title="Recipe Dashboard", page_icon="🍲", layout="wide")
 
+# Ajout d'un fond noir et personnalisation de la barre latérale avec une ombre blanche
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: black;
+        color: white;
+    }
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("https://media.cdnws.com/_i/96967/25307/3948/10/deco-table-avec-assiette-noire.jpeg") no-repeat center center;
+        background-size: cover;
+        color: black;
+    }
+    .stApp {
+        background: linear-gradient(90deg, gray, black);
+        color: white;
+    }
+    section[data-testid="stSidebar"] .css-1d391kg {
+        color: black;
+    }
+    section[data-testid="stSidebar"] .css-18e3th9 {
+        color: black;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Titre principal
 st.title("🍲 Recipe Project: Kit Big Data - BGDIA700")
 st.markdown(
@@ -73,5 +101,31 @@ Pour répondre à nos problématiques, nous combinerons les informations des deu
 Nous irons plus loin en utilisant le **NLP** pour générer des **noms de recettes à la fois créatifs et logiques** à partir des données disponibles.
 """
 )
-# Sidebar navigation
+
+# Ajouter des pages supplémentaires
+st.sidebar.title("Navigation")
+st.sidebar.markdown("Utilisez le menu ci-dessus pour accéder aux différentes analyses :")
+
+st.sidebar.title("Data Options")
+st.sidebar.markdown("**Upload Recipe Dataset (CSV file)**")
+st.sidebar.caption("Limit: 1GB per file")
+
+uploaded_files = st.sidebar.file_uploader(
+    "Drag and drop file here",
+    type="csv",
+    accept_multiple_files=True,
+    help="You can upload multiple CSV files up to 1GB each."
+)
+
+if uploaded_files:
+    st.success("Files uploaded successfully!")
+    for file in uploaded_files:
+        st.write(f"Uploaded file: {file.name}")
+
+st.sidebar.write("- [Réduction de dimension](Reduction_de_dimension_app.py)")
+st.sidebar.write("- [Génération de noms](generated_name_app.py)")
+
 st.sidebar.success("Naviguez entre les pages pour découvrir les analyses !")
+
+# Configuration pour la taille du dataset
+st.sidebar.markdown("**Limite actuelle de chargement des fichiers : 1GB**")

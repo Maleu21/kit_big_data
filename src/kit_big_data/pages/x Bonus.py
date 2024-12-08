@@ -5,6 +5,33 @@ import pandas as pd
 # Configuration de la page
 st.set_page_config(page_title="Recipe Dashboard", page_icon="🍲", layout="wide")
 
+# Ajout d'un fond noir et personnalisation de la barre latérale avec une ombre blanche
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: black;
+        color: white;
+    }
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("https://media.cdnws.com/_i/96967/25307/3948/10/deco-table-avec-assiette-noire.jpeg") no-repeat center center;
+        background-size: cover;
+        color: black;
+    }
+    .stApp {
+        background: linear-gradient(90deg, gray, black);
+        color: white;
+    }
+    section[data-testid="stSidebar"] .css-1d391kg {
+        color: black;
+    }
+    section[data-testid="stSidebar"] .css-18e3th9 {
+        color: black;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Charger les datasets
 @st.cache_data
