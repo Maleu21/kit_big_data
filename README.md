@@ -1,4 +1,22 @@
 # Kit_Big_Data
+Ce projet, intitulé Recipe Project: Kit Big Data - BGDIA700, a été réalisé par Aymen OUHIBA, Nohaila GARRA, Maël PACAUD et Martin LE CORRE.
+
+Pour exécuter notre application Streamlit, il faut installer les bibliothèques et dépendances avec Poetry, puis lancer la commande suivante :
+
+bash
+Copy code
+python -m streamlit run src/kit_big_data/app.py
+L'application est également déployée sur Streamlit Community Cloud et accessible à cette adresse :
+https://kitbigdata.streamlit.app/.
+
+Pour le déploiement, nous avons configuré un mirroring entre notre dépôt GitLab et GitHub, puis effectué le déploiement à partir de GitHub.
+
+Notre projet utilise :
+
+Black pour le formatage du code,
+Des tests unitaires pour vérifier l'importation des datasets et le chargement des données,
+Sphinx pour la gestion de la documentation,
+Une pipeline CI/CD sur GitLab pour automatiser les étapes du développement
 
 the datasets used to run all the pages of our app are stocked in the path : 
 
