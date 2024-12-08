@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "Kit_Big_Data"
+version = "0.1.0"
+description = "Environnement pour projet Recipes selon les recommandations de Martin PRILLARD"
+authors = ["Martin"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+streamlit = "^1.39.0"
+pandas = "^2.2.3"
+plotly = "^5.24.1"
+numpy = ">=1.23.5,<2.0.0"  # Downgrade numpy to be compatible with tensorflow
+python-dotenv = "^1.0.1"
+kaggle =  "^1.5.1"
+loguru = "^0.7.2"
+sphinx = "^8.1.3"
+jupyter = "^1.1.1"
+matplotlib = "^3.9.2"
+seaborn = "^0.13.2"
+ipykernel = "^6.29.5"
+nltk = "^3.8.1"
+scikit-learn = "^1.1.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^5.0.0"
+pytest = "^8.3.3"
+black = "^24.10.0"
+sphinx = "^8.1.0"
+numpydoc = "^1.8.0"
+sphinx-autodoc-typehints = "^2.5.0"
+mypy = "^1.11.2"
+bandit = "^1.7.10"
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
