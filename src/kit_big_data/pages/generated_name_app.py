@@ -132,11 +132,29 @@ if uploaded_files:
                 RAW_recipe['generated_name_m1'] = RAW_recipe.apply(lambda x: generate_recipe_name(x['ingredients'], x['steps']), axis=1)
                 st.success("Generated names using Method 1!")
                 st.write(RAW_recipe[['name', 'generated_name_m1', 'ingredients']].head(10))
+            st.markdown(
+    """
+    La première méthode permet de générer un nom de recette en utilisant les techniques de cuisine et les ingrédients présents dans les étapes de chaque recette. 
+    On extrait les techniques de cuisine (comme "cuire", "frire" ou "griller") à partir des instructions, puis sélectionne aléatoirement des ingrédients principaux tout en éliminant les verbes.
+    
+    Le nom est créé en combinant ces éléments et est affiché dans un tableau interactif, dont sont présentés ici quelques exemples.
+    """
+)
+
 
             # Generate Recipe Names (Method 2)
             if st.button("Generate Recipe Names (Method 2)"):
                 RAW_recipe['generated_name_m2'] = RAW_recipe['ingredients'].apply(generate_recipe_name_v2)
                 st.success("Generated names using Method 2!")
                 st.write(RAW_recipe[['name', 'generated_name_m2', 'ingredients']].head(10))
+            st.markdown(
+                """
+                Dans la seconde méthode, on utilise un dataset externe de recettes public (epirecipes sur Kaggle). Un preprocess est nécessaire afin de pouvoir 
+                comparer les similarités d'ingrédients (seuil à 60% minimum) entre les recettes du dataset externe et celui utilisé dans le cadre de ce projet, RAW_recipes. 
+                
+                Lorsque la condition de 60% d'ingrédients similaires est réunie entre 2 recettes (1 recette de notre dataset et 1 recette du dataset externe), 
+                on utilise le nom de la recette correspondante pour générer un nouveau nom.
+                """
+)
 
       

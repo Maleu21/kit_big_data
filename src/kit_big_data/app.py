@@ -53,6 +53,10 @@ Dans le cadre de ce projet, nous utilisons deux ensembles de données riches en 
    - Le temps de préparation,
    - Le nombre d'étapes,
    - Les ingrédients utilisés ?
+3-Visualisation des recettes par réduction de dimension pour déterminer les
+recettes qui se rapprochent de celles que l'on a déjà faites.
+4-Est-ce que les utilisateurs les plus anciens obtiennent de meilleures notes à leurs
+recettes ?
 """
 )
 

@@ -2,7 +2,21 @@
 
 the datasets used to run all the pages of our app are stocked in the path : 
 
-		Kit_Big_Data\src\kit_big_data
+		Kit_Big_Data\
+		QUESTION 3 
+	Executed with RAW_recipes_reduced.csv
+
+		QUESTION 4
+	# Generated Name v1 (transformed recipe deployment) :
+
+La première méthode permet de générer un nom de recette en utilisant les techniques de cuisine et les ingrédients présents dans les étapes de chaque recette. On extrait les techniques de cuisine (comme "cuire", "frire" ou "griller") à partir des instructions, puis sélectionne aléatoirement des ingrédients principaux tout en éliminant les verbes. 
+Le nom est créé en combinant ces éléments et est affiché dans un tableau interactif, dont sont présentés ici quelques exemples.
+
+# Generated Name v2 (second_method_comparison_deployment) : 
+
+
+Dans la seconde méthode, on utilise un dataset externe de recettes public (epirecipes sur Kaggle). Un preprocess est nécessaire afin de pouvoir 
+comparer les similarités d'ingrédients (seuil à 60% minimum) entre les recettes du dataset externe et celui utilisé dans le cadre de ce projet, RAW_recipes. Lorsque la condition de 60% d'ingrédients similaires est réunie entre 2 recettes (1 recette de notre dataset et 1 recette du dataset externe), on utilise le nom de la recette du dataset externe pour générer un nouveau nom à la recette de notre dataset.
 
 ## Getting started
 
